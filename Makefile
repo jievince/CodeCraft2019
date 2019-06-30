@@ -1,12 +1,17 @@
-# Makefile
+CXX=clang++
+CXXFLAGS=-g -std=c++11 -Wall
+BIN=prog
 
-objects = main.o
+SRC=$(wildcard *.cpp)
+OBJ=$(SRC:%.cpp=%.o)
 
-edit: $(objects)
-	g++ -o -std=C++11 [main main.cpp] $(objects)
+all: $(OBJ)
+	$(CXX) -o $(BIN) $^
 
-main.cpp: main.cpp
-	g++ -c -std=C++11 main.cpp
-	
-    
+%.o: %.c
+	$(CXX) $@ -c $<
+
+clean:
+	rm -f *.o
+	rm $(BIN)
 	
