@@ -3,10 +3,10 @@
 objects = main.o
 
 edit: $(objects)
-	g++ -o [main main.cpp] $(objects)
+	g++ -o -std=C++11 [main main.cpp] $(objects)
 
 main.cpp: main.cpp
-	g++ -c main.cpp
+	g++ -c -std=C++11 main.cpp
 	
     
 	
