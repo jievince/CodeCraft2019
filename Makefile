@@ -11,10 +11,10 @@ CPP=g++
 $(TARGET):$(OBJS)
 #	@echo TARGET:$@
 #	@echo OBJECTS:$^
-$(CPP) -o $@ $^
+ $(CPP) -o $@ $^
  
 clean:
-rm -rf $(TARGET) $(OBJS)
+ rm -rf $(TARGET) $(OBJS)
  
 %.o:%.cpp
-$(CPP) -o $@ -c $<
+ $(CPP) -o $@ -c $<
